@@ -29,8 +29,8 @@ let number3;
 // Iteration 5: Creating a randomise function to make the game functional
 
 function randomise(){
-    // number1 = Math.round(Math.random()*100)
-    // number2 = Math.round(Math.random()*100)
+    number1 = Math.round(Math.random()*100)
+    number2 = Math.round(Math.random()*100)
 
     let Operator = Math.ceil(Math.random()*5);
     // let Operator=1;
@@ -43,6 +43,8 @@ function randomise(){
         case 5: number3 = number1 % number2; break
         // default: randomise();
     }
+    number1Box.textContent = number1;
+    number2Box.textContent = number2;
     number3Box.textContent= number3;
     clearInterval(interval);
     startTimer()
